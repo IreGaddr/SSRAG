@@ -20,6 +20,7 @@
 #include <string>
 #include <thread>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 namespace fs = std::filesystem;
@@ -369,26 +370,191 @@ int main(int argc, char* argv[]) {
         }
     };
 
+    // ---- Constrained drug design query ----
+    // @+TARGET = desired convergence, @-TARGET = excluded (toxicity)
+    // Returns proteins in 2+ desired neighborhoods AND zero excluded neighborhoods.
+    auto run_constrained = [&](const std::vector<std::string>& desired,
+                               const std::vector<std::string>& excluded) {
+        std::cout << "\nConstrained target search (" << desired.size() << " desired, "
+                  << excluded.size() << " excluded)\n";
+        std::cout << std::string(60, '=') << "\n";
+
+        uint32_t neighborhood_k = std::max(k * 10, 200u);
+
+        // Collect desired neighborhoods.
+        struct TargetHood {
+            std::string name;
+            std::unordered_map<ssrag::ChunkId, float> hood;
+        };
+        std::vector<TargetHood> desired_hoods;
+
+        for (const auto& target_name : desired) {
+            auto it = name_index.find(target_name);
+            if (it == name_index.end()) {
+                std::cerr << "Desired target not found: " << target_name << "\n";
+                continue;
+            }
+            const ssrag::Chunk* target = store.get(it->second);
+            if (!target) continue;
+
+            std::cout << "\n  [+] " << target_name
+                      << " (nnz=" << target->fingerprint.nnz() << ")\n";
+
+            ssrag::ChunkId target_id = target->id;
+            const auto& target_fp = target->fingerprint;
+
+            auto hits = parallel_scan(chunks, [&](const ssrag::Chunk& chunk) -> float {
+                if (chunk.id == target_id) return std::numeric_limits<float>::quiet_NaN();
+                return -fold_cosine(target_fp, chunk.fingerprint);
+            }, neighborhood_k);
+
+            TargetHood th;
+            th.name = target_name;
+            for (const auto& h : hits) th.hood[h.id] = -h.score;
+            desired_hoods.push_back(std::move(th));
+
+            std::cout << "      Top 3: ";
+            for (size_t i = 0; i < std::min(size_t(3), hits.size()); ++i) {
+                const ssrag::Chunk* c = store.get(hits[i].id);
+                if (c) std::cout << extract_protein_name(*c) << " ";
+            }
+            std::cout << "\n";
+        }
+
+        if (desired_hoods.size() < 2) {
+            std::cerr << "Need at least 2 valid desired targets.\n";
+            return;
+        }
+
+        // Collect excluded neighborhoods into a single exclusion set.
+        std::unordered_set<ssrag::ChunkId> exclusion_set;
+        for (const auto& target_name : excluded) {
+            auto it = name_index.find(target_name);
+            if (it == name_index.end()) {
+                std::cerr << "Excluded target not found: " << target_name << "\n";
+                continue;
+            }
+            const ssrag::Chunk* target = store.get(it->second);
+            if (!target) continue;
+
+            ssrag::ChunkId target_id = target->id;
+            const auto& target_fp = target->fingerprint;
+
+            auto hits = parallel_scan(chunks, [&](const ssrag::Chunk& chunk) -> float {
+                if (chunk.id == target_id) return std::numeric_limits<float>::quiet_NaN();
+                return -fold_cosine(target_fp, chunk.fingerprint);
+            }, neighborhood_k);
+
+            for (const auto& h : hits) exclusion_set.insert(h.id);
+
+            std::cout << "  [-] " << target_name << " (excluding "
+                      << hits.size() << " neighbors)\n";
+        }
+
+        std::cout << "\n  Total exclusion set: " << exclusion_set.size() << " proteins\n";
+
+        // Find desired overlaps, filter by exclusion.
+        struct OverlapHit {
+            ssrag::ChunkId id;
+            uint32_t n_targets;
+            float avg_sim;
+            std::vector<std::pair<std::string, float>> target_sims;
+        };
+
+        std::unordered_map<ssrag::ChunkId, OverlapHit> overlaps;
+        for (const auto& th : desired_hoods) {
+            for (const auto& [cid, sim] : th.hood) {
+                auto& oh = overlaps[cid];
+                oh.id = cid;
+                oh.target_sims.push_back({th.name, sim});
+            }
+        }
+
+        std::vector<OverlapHit> results;
+        uint32_t excluded_count = 0;
+        for (auto& [cid, oh] : overlaps) {
+            oh.n_targets = static_cast<uint32_t>(oh.target_sims.size());
+            if (oh.n_targets < 2) continue;
+            if (exclusion_set.count(cid)) {
+                ++excluded_count;
+                continue;
+            }
+            float sum = 0.0f;
+            for (const auto& [_, s] : oh.target_sims) sum += s;
+            oh.avg_sim = sum / static_cast<float>(oh.n_targets);
+            results.push_back(std::move(oh));
+        }
+
+        std::sort(results.begin(), results.end(),
+                  [](const OverlapHit& a, const OverlapHit& b) {
+            if (a.n_targets != b.n_targets) return a.n_targets > b.n_targets;
+            return a.avg_sim > b.avg_sim;
+        });
+
+        if (results.size() > k) results.resize(k);
+
+        std::cout << "\n\nSELECTIVE TARGETS (" << results.size()
+                  << " candidates, " << excluded_count << " filtered by exclusion)\n";
+        std::cout << std::string(60, '=') << "\n\n";
+
+        for (size_t i = 0; i < results.size(); ++i) {
+            const auto& oh = results[i];
+            const ssrag::Chunk* chunk = store.get(oh.id);
+            if (!chunk) continue;
+
+            std::cout << "[" << (i + 1) << "] " << extract_protein_name(*chunk)
+                      << "  (in " << oh.n_targets << "/" << desired_hoods.size()
+                      << " desired, avg_sim=" << oh.avg_sim << ")\n";
+            std::cout << "    " << extract_first_line(*chunk) << "\n";
+
+            for (const auto& [tname, sim] : oh.target_sims) {
+                std::cout << "      <- " << tname << " sim=" << sim << "\n";
+            }
+
+            std::string ann = extract_annotation(*chunk, 200);
+            if (!ann.empty()) std::cout << "    " << ann << "\n";
+            std::cout << "\n";
+        }
+
+        if (results.empty()) {
+            std::cout << "No candidates survived exclusion filtering.\n"
+                      << "Try reducing exclusion targets or increasing k.\n";
+        }
+    };
+
     // ---- Dispatch ----
     auto dispatch_query = [&](const std::string& query) {
-        std::vector<std::string> targets;
+        std::vector<std::string> desired;
+        std::vector<std::string> excluded;
+        std::vector<std::string> plain_targets;
         std::istringstream qs(query);
         std::string token;
         std::string text_query;
+        bool has_constraint = false;
 
         while (qs >> token) {
-            if (token[0] == '@' && token.size() > 1) {
-                targets.push_back(token.substr(1));
+            if (token.size() > 2 && token[0] == '@' && token[1] == '+') {
+                desired.push_back(token.substr(2));
+                has_constraint = true;
+            } else if (token.size() > 2 && token[0] == '@' && token[1] == '-') {
+                excluded.push_back(token.substr(2));
+                has_constraint = true;
+            } else if (token[0] == '@' && token.size() > 1) {
+                plain_targets.push_back(token.substr(1));
             } else {
                 if (!text_query.empty()) text_query += ' ';
                 text_query += token;
             }
         }
 
-        if (targets.size() >= 2) {
-            run_multi_target(targets);
-        } else if (targets.size() == 1) {
-            run_neighborhood_query(targets[0]);
+        if (has_constraint) {
+            // Mix plain @targets into desired if constrained mode is active.
+            for (auto& t : plain_targets) desired.push_back(std::move(t));
+            run_constrained(desired, excluded);
+        } else if (plain_targets.size() >= 2) {
+            run_multi_target(plain_targets);
+        } else if (plain_targets.size() == 1) {
+            run_neighborhood_query(plain_targets[0]);
         } else {
             run_text_query(text_query);
         }
@@ -400,11 +566,13 @@ int main(int argc, char* argv[]) {
     }
 
     std::cerr << "\nQuery modes:\n"
-              << "  text search:         mitochondrial complex I\n"
+              << "  text search:          mitochondrial complex I\n"
               << "  protein neighborhood: @EGFR\n"
               << "  multi-target overlap: @EGFR @BRAF @MAPK1\n"
-              << "  set k:               k=20\n"
-              << "  quit:                quit\n\n";
+              << "  constrained design:   @+APP @+PSEN1 @+MAPT @-KCNH2 @-HCN4\n"
+              << "    @+ = desired convergence, @- = excluded (toxicity)\n"
+              << "  set k:                k=20\n"
+              << "  quit:                 quit\n\n";
 
     std::string line;
     while (true) {

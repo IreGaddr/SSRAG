@@ -1,0 +1,225 @@
+ssrag> Set k=30
+ssrag> 
+Constrained target search (6 desired, 5 excluded)
+============================================================
+
+  [+] APP (nnz=594)
+      Top 3: BMP6 BAX WNT3A 
+
+  [+] PSEN1 (nnz=609)
+      Top 3: CIDEA SERPINF2 GSK3B 
+
+  [+] MAPT (nnz=594)
+      Top 3: DTNBP1 KAT5 EZR 
+
+  [+] APOE (nnz=728)
+      Top 3: VHL SERPINF1 FUS 
+
+  [+] TREM2 (nnz=754)
+      Top 3: ZC3H12A AGER TLR4 
+
+  [+] BACE1 (nnz=561)
+      Top 3: HSPA5 TAC1 SLC2A4 
+  [-] KCNH2 (excluding 300 neighbors)
+  [-] HCN4 (excluding 300 neighbors)
+  [-] CACNA1C (excluding 300 neighbors)
+  [-] CHRM2 (excluding 300 neighbors)
+  [-] OPRM1 (excluding 300 neighbors)
+
+  Total exclusion set: 884 proteins
+
+
+SELECTIVE TARGETS (30 candidates, 0 filtered by exclusion)
+============================================================
+
+[1] SLIT3  (in 3/6 desired, avg_sim=0.2787)
+    SLIT3 (9606.ENSP00000332164) 1530 amino acids
+      <- PSEN1 sim=0.324138
+      <- MAPT sim=0.314995
+      <- BACE1 sim=0.196967
+    Slit homolog 3 protein; May act as molecular guidance cue in cellular migration, and function may be mediated by interaction with roundabout homolog receptors.
+
+[2] HAVCR2  (in 3/6 desired, avg_sim=0.266971)
+    HAVCR2 (9606.ENSP00000312002) 301 amino acids
+      <- PSEN1 sim=0.31265
+      <- TREM2 sim=0.289905
+      <- BACE1 sim=0.198357
+    Hepatitis A virus cellular receptor 2; Cell surface receptor implicated in modulating innate and adaptive immune responses. Generally accepted to have an inhibiting function. Reports on stimulating fu...
+
+[3] LILRB1  (in 3/6 desired, avg_sim=0.256855)
+    LILRB1 (9606.ENSP00000315997) 652 amino acids
+      <- PSEN1 sim=0.294623
+      <- TREM2 sim=0.298764
+      <- BACE1 sim=0.177178
+    Leukocyte immunoglobulin-like receptor subfamily B member 1; Receptor for class I MHC antigens. Recognizes a broad spectrum of HLA-A, HLA-B, HLA-C, HLA-G and HLA-F alleles. Receptor for H301/UL18, a h...
+
+[4] TBK1  (in 3/6 desired, avg_sim=0.244628)
+    TBK1 (9606.ENSP00000329967) 729 amino acids
+      <- PSEN1 sim=0.318958
+      <- MAPT sim=0.224039
+      <- BACE1 sim=0.190886
+    Serine/threonine-protein kinase TBK1; Serine/threonine kinase that plays an essential role in regulating inflammatory responses to foreign agents. Following activation of toll-like receptors by viral ...
+
+[5] LRP8  (in 3/6 desired, avg_sim=0.237816)
+    LRP8 (9606.ENSP00000303634) 963 amino acids
+      <- APP sim=0.337199
+      <- PSEN1 sim=0.193543
+      <- BACE1 sim=0.182707
+    Low-density lipoprotein receptor-related protein 8; Cell surface receptor for Reelin (RELN) and apolipoprotein E (apoE)-containing ligands. LRP8 participates in transmitting the extracellular Reelin s...
+
+[6] HSP90AA1  (in 3/6 desired, avg_sim=0.227515)
+    HSP90AA1 (9606.ENSP00000335153) 854 amino acids
+      <- PSEN1 sim=0.248381
+      <- MAPT sim=0.227655
+      <- BACE1 sim=0.206509
+    Heat shock protein HSP 90-alpha; Molecular chaperone that promotes the maturation, structural maintenance and proper regulation of specific target proteins involved for instance in cell cycle control ...
+
+[7] IL13  (in 3/6 desired, avg_sim=0.221202)
+    IL13 (9606.ENSP00000304915) 146 amino acids
+      <- APP sim=0.264739
+      <- PSEN1 sim=0.19924
+      <- BACE1 sim=0.199628
+    Interleukin-13; Cytokine. Inhibits inflammatory cytokine production. Synergizes with IL2 in regulating interferon-gamma synthesis. May be critical in regulating inflammatory and immune responses. Posi...
+
+[8] PDE2A  (in 3/6 desired, avg_sim=0.213872)
+    PDE2A (9606.ENSP00000334910) 941 amino acids
+      <- PSEN1 sim=0.203509
+      <- MAPT sim=0.220463
+      <- BACE1 sim=0.217643
+    cGMP-dependent 3',5'-cyclic phosphodiesterase; Cyclic nucleotide phosphodiesterase with a dual-specificity for the second messengers cAMP and cGMP, which are key regulators of many important physiolog...
+
+[9] ATF4  (in 3/6 desired, avg_sim=0.210317)
+    ATF4 (9606.ENSP00000336790) 351 amino acids
+      <- PSEN1 sim=0.199211
+      <- MAPT sim=0.207222
+      <- BACE1 sim=0.224516
+    Cyclic AMP-dependent transcription factor ATF-4; Transcriptional activator. Binds the cAMP response element (CRE) (consensus: 5'-GTGACGT[AC][AG]-3'), a sequence present in many viral and cellular prom...
+
+[10] TMEM108  (in 3/6 desired, avg_sim=0.203621)
+    TMEM108 (9606.ENSP00000324651) 575 amino acids
+      <- PSEN1 sim=0.192862
+      <- MAPT sim=0.213836
+      <- BACE1 sim=0.204166
+    Transmembrane protein 108; Transmembrane protein required for proper cognitive functions. Involved in the development of dentate gyrus (DG) neuron circuitry, is necessary for AMPA receptors surface ex...
+
+[11] DTNBP1  (in 2/6 desired, avg_sim=0.40859)
+    DTNBP1 (9606.ENSP00000341680) 351 amino acids
+      <- PSEN1 sim=0.349261
+      <- MAPT sim=0.467918
+    Dysbindin; Component of the BLOC-1 complex, a complex that is required for normal biogenesis of lysosome-related organelles (LRO), such as platelet dense granules and melanosomes. In concert with the ...
+
+[12] ANG  (in 2/6 desired, avg_sim=0.401335)
+    ANG (9606.ENSP00000336762) 147 amino acids
+      <- PSEN1 sim=0.409052
+      <- MAPT sim=0.393618
+    Angiogenin; Binds to actin on the surface of endothelial cells; once bound, angiogenin is endocytosed and translocated to the nucleus. Stimulates ribosomal RNA synthesis including that containing the ...
+
+[13] CAV1  (in 2/6 desired, avg_sim=0.385958)
+    CAV1 (9606.ENSP00000339191) 178 amino acids
+      <- PSEN1 sim=0.332395
+      <- MAPT sim=0.43952
+    Caveolin-1; May act as a scaffolding protein within caveolar membranes. Forms a stable heterooligomeric complex with CAV2 that targets to lipid rafts and drives caveolae formation. Mediates the recrui...
+
+[14] EZR  (in 2/6 desired, avg_sim=0.376817)
+    EZR (9606.ENSP00000338934) 586 amino acids
+      <- PSEN1 sim=0.302663
+      <- MAPT sim=0.45097
+    Ezrin; Probably involved in connections of major cytoskeletal structures to the plasma membrane. In epithelial cells, required for the formation of microvilli and membrane ruffles on the apical pole. ...
+
+[15] MEF2C  (in 2/6 desired, avg_sim=0.376219)
+    MEF2C (9606.ENSP00000340874) 483 amino acids
+      <- PSEN1 sim=0.342689
+      <- MAPT sim=0.409749
+    Myocyte-specific enhancer factor 2C; Transcription activator which binds specifically to the MEF2 element present in the regulatory regions of many muscle-specific genes. Controls cardiac morphogenesi...
+
+[16] PRKCD  (in 2/6 desired, avg_sim=0.36906)
+    PRKCD (9606.ENSP00000331602) 676 amino acids
+      <- PSEN1 sim=0.420994
+      <- MAPT sim=0.317126
+    Protein kinase C delta type regulatory subunit; Calcium-independent, phospholipid- and diacylglycerol (DAG)- dependent serine/threonine-protein kinase that plays contrasting roles in cell death and ce...
+
+[17] LRRK2  (in 2/6 desired, avg_sim=0.368893)
+    LRRK2 (9606.ENSP00000298910) 2527 amino acids
+      <- APP sim=0.484164
+      <- PSEN1 sim=0.253621
+    Leucine-rich repeat serine/threonine-protein kinase 2; Serine/threonine-protein kinase which phosphorylates a broad range of proteins involved in multiple processes such as neuronal plasticity, autoph...
+
+[18] KREMEN1  (in 2/6 desired, avg_sim=0.357856)
+    KREMEN1 (9606.ENSP00000331242) 492 amino acids
+      <- PSEN1 sim=0.397498
+      <- MAPT sim=0.318215
+    Kremen protein 1; Receptor for Dickkopf proteins. Cooperates with DKK1/2 to inhibit Wnt/beta-catenin signaling by promoting the endocytosis of Wnt receptors LRP5 and LRP6. In the absence of DKK1, pote...
+
+[19] CRHBP  (in 2/6 desired, avg_sim=0.356051)
+    CRHBP (9606.ENSP00000274368) 322 amino acids
+      <- APP sim=0.439501
+      <- BACE1 sim=0.272601
+    Corticotropin-releasing factor-binding protein; Binds CRF and inactivates it. May prevent inappropriate pituitary-adrenal stimulation in pregnancy; Belongs to the CRF-binding protein family.
+
+[20] HJV  (in 2/6 desired, avg_sim=0.351231)
+    HJV (9606.ENSP00000337014) 426 amino acids
+      <- PSEN1 sim=0.290616
+      <- MAPT sim=0.411845
+    Hemojuvelin; Acts as a bone morphogenetic protein (BMP) coreceptor. Through enhancement of BMP signaling regulates hepcidin (HAMP) expression and regulates iron homeostasis. Belongs to the repulsive g...
+
+[21] IMPACT  (in 2/6 desired, avg_sim=0.34839)
+    IMPACT (9606.ENSP00000284202) 320 amino acids
+      <- APP sim=0.489234
+      <- BACE1 sim=0.207545
+    Protein IMPACT; Translational regulator that ensures constant high levels of translation upon a variety of stress conditions, such as amino acid starvation, UV-C irradiation, proteasome inhibitor trea...
+
+[22] PDGFB  (in 2/6 desired, avg_sim=0.340134)
+    PDGFB (9606.ENSP00000330382) 241 amino acids
+      <- PSEN1 sim=0.400026
+      <- MAPT sim=0.280242
+    Platelet-derived growth factor subunit B; Growth factor that plays an essential role in the regulation of embryonic development, cell proliferation, cell migration, survival and chemotaxis. Potent mit...
+
+[23] SMAD3  (in 2/6 desired, avg_sim=0.333987)
+    SMAD3 (9606.ENSP00000332973) 425 amino acids
+      <- PSEN1 sim=0.373756
+      <- MAPT sim=0.294218
+    Mothers against decapentaplegic homolog 3; Receptor-regulated SMAD (R-SMAD) that is an intracellular signal transducer and transcriptional modulator activated by TGF-beta (transforming growth factor) ...
+
+[24] CIDEA  (in 2/6 desired, avg_sim=0.329438)
+    CIDEA (9606.ENSP00000320209) 219 amino acids
+      <- PSEN1 sim=0.459858
+      <- MAPT sim=0.199019
+    Cell death activator CIDE-A; Acts as a CEBPB coactivator in mammary epithelial cells to control the expression of a subset of CEBPB downstream target genes, including ID2, IGF1, PRLR, SOCS1, SOCS3, XD...
+
+[25] INHBB  (in 2/6 desired, avg_sim=0.329166)
+    INHBB (9606.ENSP00000295228) 407 amino acids
+      <- APP sim=0.40861
+      <- BACE1 sim=0.249721
+    Inhibin beta B chain; Inhibins and activins inhibit and activate, respectively, the secretion of follitropin by the pituitary gland. Inhibins/activins are involved in regulating a number of diverse fu...
+
+[26] FBLN1  (in 2/6 desired, avg_sim=0.326218)
+    FBLN1 (9606.ENSP00000331544) 703 amino acids
+      <- PSEN1 sim=0.358114
+      <- MAPT sim=0.294322
+    Fibulin-1; Incorporated into fibronectin-containing matrix fibers. May play a role in cell adhesion and migration along protein fibers within the extracellular matrix (ECM). Could be important for cer...
+
+[27] FGG  (in 2/6 desired, avg_sim=0.32282)
+    FGG (9606.ENSP00000336829) 453 amino acids
+      <- PSEN1 sim=0.324876
+      <- MAPT sim=0.320765
+    Fibrinogen gamma chain; Together with fibrinogen alpha (FGA) and fibrinogen beta (FGB), polymerizes to form an insoluble fibrin matrix. Has a major function in hemostasis as one of the primary compone...
+
+[28] RTN4  (in 2/6 desired, avg_sim=0.322324)
+    RTN4 (9606.ENSP00000337838) 1192 amino acids
+      <- PSEN1 sim=0.364118
+      <- MAPT sim=0.280531
+    Reticulon-4; Required to induce the formation and stabilization of endoplasmic reticulum (ER) tubules. They regulate membrane morphogenesis in the ER by promoting tubular ER production. They influence...
+
+[29] CALR  (in 2/6 desired, avg_sim=0.318052)
+    CALR (9606.ENSP00000320866) 417 amino acids
+      <- PSEN1 sim=0.428037
+      <- BACE1 sim=0.208068
+    Calreticulin; Calcium-binding chaperone that promotes folding, oligomeric assembly and quality control in the endoplasmic reticulum (ER) via the calreticulin/calnexin cycle. This lectin interacts tran...
+
+[30] STC1  (in 2/6 desired, avg_sim=0.316382)
+    STC1 (9606.ENSP00000290271) 247 amino acids
+      <- APP sim=0.39807
+      <- BACE1 sim=0.234695
+    Stanniocalcin-1; Stimulates renal phosphate reabsorption, and could therefore prevent hypercalcemia.
+
+ssrag> 
