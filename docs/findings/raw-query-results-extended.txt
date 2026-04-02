@@ -1,0 +1,666 @@
+Loading index from "data/ssrag_human"...
+Loaded 19699 documents, dim=19955, contrast=141.262:1
+Built name index: 19699 proteins
+
+Query modes:
+  text search:         mitochondrial complex I
+  protein neighborhood: @EGFR
+  multi-target overlap: @EGFR @BRAF @MAPK1
+  set k:               k=20
+  quit:                quit
+
+ssrag> Set k=30
+ssrag> 
+Multi-target neighborhood overlap (4 targets)
+============================================================
+
+Target: ACE (nnz=540)
+  Top 5 neighbors:
+    APPL1 (fold_sim=0.573637)
+    STC1 (fold_sim=0.565221)
+    BMP6 (fold_sim=0.500374)
+    BAX (fold_sim=0.498713)
+    CRHBP (fold_sim=0.484078)
+
+Target: PTGS1 (nnz=577)
+  Top 5 neighbors:
+    CYP1A2 (fold_sim=0.486773)
+    CYP2C8 (fold_sim=0.479339)
+    CYP2A13 (fold_sim=0.472006)
+    SGMS1 (fold_sim=0.450954)
+    AKR1B10 (fold_sim=0.444835)
+
+Target: PTGS2 (nnz=680)
+  Top 5 neighbors:
+    BNIP3 (fold_sim=0.71194)
+    IFI16 (fold_sim=0.621289)
+    ARG1 (fold_sim=0.617504)
+    CCN2 (fold_sim=0.593412)
+    AIM2 (fold_sim=0.559971)
+
+Target: SLC12A3 (nnz=726)
+  Top 5 neighbors:
+    SLC13A5 (fold_sim=0.807353)
+    BEST1 (fold_sim=0.794013)
+    PRF1 (fold_sim=0.755256)
+    PET117 (fold_sim=0.74795)
+    SNX10 (fold_sim=0.725503)
+
+
+OVERLAPPING NEIGHBORHOODS (7 proteins in 2+ target neighborhoods)
+============================================================
+
+[1] ALOX15  (in 2/4 neighborhoods, avg_sim=0.283288)
+    ALOX15 (9606.ENSP00000293761) 662 amino acids
+      <- ACE sim=0.350093
+      <- PTGS1 sim=0.216483
+    Arachidonate 15-lipoxygenase; Non-heme iron-containing dioxygenase that catalyzes the stereo-specific peroxidation of free and esterified polyunsaturated fatty acids generating a spectrum of bioactive...
+
+[2] ALOX5  (in 2/4 neighborhoods, avg_sim=0.259333)
+    ALOX5 (9606.ENSP00000363512) 674 amino acids
+      <- PTGS1 sim=0.220246
+      <- PTGS2 sim=0.298421
+    Arachidonate 5-lipoxygenase; Catalyzes the first step in leukotriene biosynthesis, and thereby plays a role in inflammatory processes. Belongs to the lipoxygenase family.
+
+[3] HSPA5  (in 2/4 neighborhoods, avg_sim=0.254478)
+    HSPA5 (9606.ENSP00000324173) 654 amino acids
+      <- ACE sim=0.193473
+      <- PTGS2 sim=0.315483
+    Endoplasmic reticulum chaperone BiP; Endoplasmic reticulum chaperone that plays a key role in protein folding and quality control in the endoplasmic reticulum lumen. Involved in the correct folding of...
+
+[4] PCK1  (in 2/4 neighborhoods, avg_sim=0.244896)
+    PCK1 (9606.ENSP00000319814) 622 amino acids
+      <- ACE sim=0.197015
+      <- PTGS2 sim=0.292777
+    Phosphoenolpyruvate carboxykinase, cytosolic [GTP]; Regulates cataplerosis and anaplerosis, the processes that control the levels of metabolic intermediates in the citric acid cycle. At low glucose le...
+
+[5] DDIT4  (in 2/4 neighborhoods, avg_sim=0.243938)
+    DDIT4 (9606.ENSP00000307305) 232 amino acids
+      <- ACE sim=0.225866
+      <- PTGS2 sim=0.262011
+    DNA damage-inducible transcript 4 protein; Regulates cell growth, proliferation and survival via inhibition of the activity of the mammalian target of rapamycin complex 1 (mTORC1). Inhibition of mTORC...
+
+[6] RAP1A  (in 2/4 neighborhoods, avg_sim=0.243605)
+    RAP1A (9606.ENSP00000358723) 184 amino acids
+      <- PTGS1 sim=0.179527
+      <- PTGS2 sim=0.307682
+    Ras-related protein Rap-1A; Induces morphological reversion of a cell line transformed by a Ras oncogene. Counteracts the mitogenic function of Ras, at least partly because it can interact with Ras GA...
+
+[7] CASP7  (in 2/4 neighborhoods, avg_sim=0.230953)
+    CASP7 (9606.ENSP00000358327) 388 amino acids
+      <- PTGS1 sim=0.18168
+      <- PTGS2 sim=0.280225
+    Caspase-7 subunit p11; Involved in the activation cascade of caspases responsible for apoptosis execution. Cleaves and activates sterol regulatory element binding proteins (SREBPs). Proteolytically cl...
+
+ssrag> Loading index from "data/ssrag_human"...
+Loaded 19699 documents, dim=19955, contrast=141.262:1
+Built name index: 19699 proteins
+
+Query modes:
+  text search:         mitochondrial complex I
+  protein neighborhood: @EGFR
+  multi-target overlap: @EGFR @BRAF @MAPK1
+  set k:               k=20
+  quit:                quit
+
+ssrag> Set k=30
+ssrag> 
+Multi-target neighborhood overlap (4 targets)
+============================================================
+
+Target: SLC6A4 (nnz=569)
+  Top 5 neighbors:
+    SLC7A5 (fold_sim=0.661753)
+    SLC1A1 (fold_sim=0.593589)
+    SLC9A3R1 (fold_sim=0.509546)
+    P2RX3 (fold_sim=0.478284)
+    SLC38A2 (fold_sim=0.476879)
+
+Target: PTGS1 (nnz=577)
+  Top 5 neighbors:
+    CYP1A2 (fold_sim=0.486773)
+    CYP2C8 (fold_sim=0.479339)
+    CYP2A13 (fold_sim=0.472006)
+    SGMS1 (fold_sim=0.450954)
+    AKR1B10 (fold_sim=0.444835)
+
+Target: PTGS2 (nnz=680)
+  Top 5 neighbors:
+    BNIP3 (fold_sim=0.71194)
+    IFI16 (fold_sim=0.621289)
+    ARG1 (fold_sim=0.617504)
+    CCN2 (fold_sim=0.593412)
+    AIM2 (fold_sim=0.559971)
+
+Target: VKORC1 (nnz=524)
+  Top 5 neighbors:
+    STAMBP (fold_sim=0.732834)
+    GPC3 (fold_sim=0.714544)
+    GLI3 (fold_sim=0.691561)
+    TFAP2B (fold_sim=0.690174)
+    PRKAR1A (fold_sim=0.68398)
+
+
+OVERLAPPING NEIGHBORHOODS (3 proteins in 2+ target neighborhoods)
+============================================================
+
+[1] ALOX5  (in 2/4 neighborhoods, avg_sim=0.259333)
+    ALOX5 (9606.ENSP00000363512) 674 amino acids
+      <- PTGS1 sim=0.220246
+      <- PTGS2 sim=0.298421
+    Arachidonate 5-lipoxygenase; Catalyzes the first step in leukotriene biosynthesis, and thereby plays a role in inflammatory processes. Belongs to the lipoxygenase family.
+
+[2] RAP1A  (in 2/4 neighborhoods, avg_sim=0.243605)
+    RAP1A (9606.ENSP00000358723) 184 amino acids
+      <- PTGS1 sim=0.179527
+      <- PTGS2 sim=0.307682
+    Ras-related protein Rap-1A; Induces morphological reversion of a cell line transformed by a Ras oncogene. Counteracts the mitogenic function of Ras, at least partly because it can interact with Ras GA...
+
+[3] CASP7  (in 2/4 neighborhoods, avg_sim=0.230953)
+    CASP7 (9606.ENSP00000358327) 388 amino acids
+      <- PTGS1 sim=0.18168
+      <- PTGS2 sim=0.280225
+    Caspase-7 subunit p11; Involved in the activation cascade of caspases responsible for apoptosis execution. Cleaves and activates sterol regulatory element binding proteins (SREBPs). Proteolytically cl...
+
+ssrag> Loading index from "data/ssrag_human"...
+Loaded 19699 documents, dim=19955, contrast=141.262:1
+Built name index: 19699 proteins
+
+Query modes:
+  text search:         mitochondrial complex I
+  protein neighborhood: @EGFR
+  multi-target overlap: @EGFR @BRAF @MAPK1
+  set k:               k=20
+  quit:                quit
+
+ssrag> Set k=30
+ssrag> 
+Multi-target neighborhood overlap (5 targets)
+============================================================
+
+Target: CHRM1 (nnz=652)
+  Top 5 neighbors:
+    HTR1E (fold_sim=0.774574)
+    GPR27 (fold_sim=0.727144)
+    P2RY2 (fold_sim=0.699894)
+    GPR171 (fold_sim=0.686972)
+    OR5T3 (fold_sim=0.685542)
+
+Target: CHRM2 (nnz=567)
+  Top 5 neighbors:
+    CHRM4 (fold_sim=0.666142)
+    CHRM5 (fold_sim=0.547347)
+    LPAR4 (fold_sim=0.477306)
+    HTR1D (fold_sim=0.471055)
+    HRH2 (fold_sim=0.453035)
+
+Target: CHRM3 (nnz=622)
+  Top 5 neighbors:
+    NOTCH2 (fold_sim=0.798086)
+    KRAS (fold_sim=0.790666)
+    MNX1 (fold_sim=0.781153)
+    JAG1 (fold_sim=0.779498)
+    IER3IP1 (fold_sim=0.773095)
+
+Target: HRH1 (nnz=537)
+  Top 5 neighbors:
+    LYPD1 (fold_sim=0.532814)
+    CHRM5 (fold_sim=0.514374)
+    UCN3 (fold_sim=0.478346)
+    NPY (fold_sim=0.469635)
+    GRM2 (fold_sim=0.465105)
+
+Target: ACHE (nnz=501)
+  Top 5 neighbors:
+    C1QTNF4 (fold_sim=0.480412)
+    TRIM44 (fold_sim=0.418226)
+    LRP8 (fold_sim=0.413161)
+    IL16 (fold_sim=0.405945)
+    TRAT1 (fold_sim=0.387362)
+
+
+OVERLAPPING NEIGHBORHOODS (30 proteins in 2+ target neighborhoods)
+============================================================
+
+[1] CHRM5  (in 3/5 neighborhoods, avg_sim=0.460378)
+    CHRM5 (9606.ENSP00000372750) 532 amino acids
+      <- CHRM1 sim=0.319414
+      <- CHRM2 sim=0.547347
+      <- HRH1 sim=0.514374
+    Muscarinic acetylcholine receptor M5; The muscarinic acetylcholine receptor mediates various cellular responses, including inhibition of adenylate cyclase, breakdown of phosphoinositides and modulatio...
+
+[2] HTR1D  (in 3/5 neighborhoods, avg_sim=0.392321)
+    HTR1D (9606.ENSP00000363748) 377 amino acids
+      <- CHRM1 sim=0.364978
+      <- CHRM2 sim=0.471055
+      <- HRH1 sim=0.340932
+    5-hydroxytryptamine receptor 1D; G-protein coupled receptor for 5-hydroxytryptamine (serotonin). Also functions as a receptor for ergot alkaloid derivatives, various anxiolytic and antidepressant drug...
+
+[3] HRH2  (in 3/5 neighborhoods, avg_sim=0.391023)
+    HRH2 (9606.ENSP00000366506) 397 amino acids
+      <- CHRM1 sim=0.331788
+      <- CHRM2 sim=0.453035
+      <- HRH1 sim=0.388246
+    Histamine H2 receptor; The H2 subclass of histamine receptors mediates gastric acid secretion. Also appears to regulate gastrointestinal motility and intestinal secretion. Possible role in regulating ...
+
+[4] HTR1F  (in 3/5 neighborhoods, avg_sim=0.380298)
+    HTR1F (9606.ENSP00000322924) 366 amino acids
+      <- CHRM1 sim=0.639798
+      <- CHRM2 sim=0.299192
+      <- HRH1 sim=0.201905
+    5-hydroxytryptamine receptor 1F; G-protein coupled receptor for 5-hydroxytryptamine (serotonin). Also functions as a receptor for various alkaloids and psychoactive substances. Ligand binding causes a...
+
+[5] P2RY11  (in 3/5 neighborhoods, avg_sim=0.362193)
+    P2RY11 (9606.ENSP00000323872) 374 amino acids
+      <- CHRM1 sim=0.590922
+      <- CHRM2 sim=0.279274
+      <- HRH1 sim=0.216381
+    P2Y purinoceptor 11; Receptor for ATP and ADP coupled to G-proteins that activate both phosphatidylinositol-calcium and adenylyl cyclase second messenger systems. Not activated by UTP or UDP.
+
+[6] P2RY4  (in 3/5 neighborhoods, avg_sim=0.358082)
+    P2RY4 (9606.ENSP00000363643) 365 amino acids
+      <- CHRM1 sim=0.285255
+      <- CHRM2 sim=0.401143
+      <- HRH1 sim=0.387847
+    P2Y purinoceptor 4; Receptor for UTP and UDP coupled to G-proteins that activate a phosphatidylinositol-calcium second messenger system. Not activated by ATP or ADP.
+
+[7] GRPR  (in 3/5 neighborhoods, avg_sim=0.316153)
+    GRPR (9606.ENSP00000369643) 384 amino acids
+      <- CHRM1 sim=0.292463
+      <- CHRM2 sim=0.343925
+      <- HRH1 sim=0.312072
+    Gastrin-releasing peptide receptor; Receptor for gastrin-releasing peptide (GRP). Signals via association with G proteins that activate a phosphatidylinositol-calcium second messenger system, resultin...
+
+[8] HRH3  (in 3/5 neighborhoods, avg_sim=0.314389)
+    HRH3 (9606.ENSP00000342560) 445 amino acids
+      <- CHRM1 sim=0.390591
+      <- CHRM2 sim=0.290691
+      <- HRH1 sim=0.261886
+    Histamine H3 receptor; The H3 subclass of histamine receptors could mediate the histamine signals in CNS and peripheral nervous system. Signals through the inhibition of adenylate cyclase and displays...
+
+[9] SSTR2  (in 3/5 neighborhoods, avg_sim=0.311916)
+    SSTR2 (9606.ENSP00000350198) 369 amino acids
+      <- CHRM1 sim=0.36917
+      <- CHRM2 sim=0.316217
+      <- HRH1 sim=0.250362
+    Somatostatin receptor type 2; Receptor for somatostatin-14 and -28. This receptor is coupled via pertussis toxin sensitive G proteins to inhibition of adenylyl cyclase. In addition it stimulates phosp...
+
+[10] HTR1A  (in 3/5 neighborhoods, avg_sim=0.309528)
+    HTR1A (9606.ENSP00000316244) 422 amino acids
+      <- CHRM1 sim=0.521635
+      <- CHRM2 sim=0.209152
+      <- HRH1 sim=0.197798
+    5-hydroxytryptamine receptor 1A; G-protein coupled receptor for 5-hydroxytryptamine (serotonin). Also functions as a receptor for various drugs and psychoactive substances. Ligand binding causes a con...
+
+[11] HTR4  (in 3/5 neighborhoods, avg_sim=0.306044)
+    HTR4 (9606.ENSP00000353915) 428 amino acids
+      <- CHRM1 sim=0.320665
+      <- CHRM2 sim=0.32748
+      <- HRH1 sim=0.269989
+    5-hydroxytryptamine receptor 4; This is one of the several different receptors for 5- hydroxytryptamine (serotonin), a biogenic hormone that functions as a neurotransmitter, a hormone, and a mitogen. ...
+
+[12] GPR52  (in 3/5 neighborhoods, avg_sim=0.295613)
+    GPR52 (9606.ENSP00000356658) 361 amino acids
+      <- CHRM1 sim=0.348234
+      <- CHRM2 sim=0.345355
+      <- HRH1 sim=0.193251
+    G-protein coupled receptor 52; Gs-coupled receptor activated by antipsychotics reserpine leading to an increase in intracellular cAMP and its internalization. May play a role in locomotor activity thr...
+
+[13] HTR7  (in 3/5 neighborhoods, avg_sim=0.266063)
+    HTR7 (9606.ENSP00000337949) 479 amino acids
+      <- CHRM1 sim=0.326721
+      <- CHRM2 sim=0.247403
+      <- HRH1 sim=0.224065
+    5-hydroxytryptamine receptor 7; This is one of the several different receptors for 5- hydroxytryptamine (serotonin), a biogenic hormone that functions as a neurotransmitter, a hormone, and a mitogen. ...
+
+[14] OPN1MW2  (in 3/5 neighborhoods, avg_sim=0.259444)
+    OPN1MW2 (9606.ENSP00000358945) 364 amino acids
+      <- CHRM1 sim=0.301853
+      <- CHRM2 sim=0.287678
+      <- HRH1 sim=0.1888
+    Medium-wave-sensitive opsin 2; Visual pigments are the light-absorbing molecules that mediate vision. They consist of an apoprotein, opsin, covalently linked to cis-retinal; Belongs to the G-protein c...
+
+[15] FFAR3  (in 3/5 neighborhoods, avg_sim=0.257594)
+    FFAR3 (9606.ENSP00000328230) 346 amino acids
+      <- CHRM1 sim=0.376156
+      <- CHRM2 sim=0.197557
+      <- HRH1 sim=0.199069
+    Free fatty acid receptor 3; G protein-coupled receptor that is activated by a major product of dietary fiber digestion, the short chain fatty acids (SCFAs), and that plays a role in the regulation of ...
+
+[16] CGB3  (in 3/5 neighborhoods, avg_sim=0.249592)
+    CGB3 (9606.ENSP00000349954) 165 amino acids
+      <- CHRM1 sim=0.280131
+      <- CHRM2 sim=0.280966
+      <- HRH1 sim=0.187679
+    Chorionic gonadotropin subunit beta 3.
+
+[17] ADRB3  (in 3/5 neighborhoods, avg_sim=0.245997)
+    ADRB3 (9606.ENSP00000343782) 408 amino acids
+      <- CHRM1 sim=0.327801
+      <- CHRM2 sim=0.215685
+      <- HRH1 sim=0.194506
+    Beta-3 adrenergic receptor; Beta-adrenergic receptors mediate the catecholamine-induced activation of adenylate cyclase through the action of G proteins. Beta- 3 is involved in the regulation of lipol...
+
+[18] GPR173  (in 3/5 neighborhoods, avg_sim=0.230203)
+    GPR173 (9606.ENSP00000331600) 373 amino acids
+      <- CHRM1 sim=0.285634
+      <- CHRM2 sim=0.204879
+      <- HRH1 sim=0.200097
+    Probable G-protein coupled receptor 173; Is a receptor for the SMIM20 derived peptides Phoenixin-14 and Phoenixin-20 (By similarity). It mediates the Phoenixin-14 and Phoenixin-20 augmentation of gona...
+
+[19] HTR1E  (in 2/5 neighborhoods, avg_sim=0.507244)
+    HTR1E (9606.ENSP00000307766) 365 amino acids
+      <- CHRM1 sim=0.774574
+      <- CHRM2 sim=0.239913
+    5-hydroxytryptamine receptor 1E; G-protein coupled receptor for 5-hydroxytryptamine (serotonin). Also functions as a receptor for various alkaloids and psychoactive substances. Ligand binding causes a...
+
+[20] GPR27  (in 2/5 neighborhoods, avg_sim=0.473301)
+    GPR27 (9606.ENSP00000303149) 375 amino acids
+      <- CHRM1 sim=0.727144
+      <- CHRM2 sim=0.219458
+    Probable G-protein coupled receptor 27; Orphan receptor. Possible candidate for amine-like G-protein coupled receptor.
+
+[21] OR5T3  (in 2/5 neighborhoods, avg_sim=0.464709)
+    OR5T3 (9606.ENSP00000305403) 340 amino acids
+      <- CHRM1 sim=0.685542
+      <- CHRM2 sim=0.243876
+    Olfactory receptor 5T3; Odorant receptor; Belongs to the G-protein coupled receptor 1 family.
+
+[22] CHRM4  (in 2/5 neighborhoods, avg_sim=0.458566)
+    CHRM4 (9606.ENSP00000409378) 479 amino acids
+      <- CHRM2 sim=0.666142
+      <- HRH1 sim=0.25099
+    Muscarinic acetylcholine receptor M4; The muscarinic acetylcholine receptor mediates various cellular responses, including inhibition of adenylate cyclase, breakdown of phosphoinositides and modulatio...
+
+[23] P2RY2  (in 2/5 neighborhoods, avg_sim=0.452196)
+    P2RY2 (9606.ENSP00000310305) 377 amino acids
+      <- CHRM1 sim=0.699894
+      <- CHRM2 sim=0.204497
+    P2Y purinoceptor 2; Receptor for ATP and UTP coupled to G-proteins that activate a phosphatidylinositol-calcium second messenger system. The affinity range is UTP = ATP > ATP-gamma-S >> 2-methylthio-A...
+
+[24] GPR171  (in 2/5 neighborhoods, avg_sim=0.450759)
+    GPR171 (9606.ENSP00000308479) 319 amino acids
+      <- CHRM1 sim=0.686972
+      <- CHRM2 sim=0.214545
+    Probable G-protein coupled receptor 171; Orphan receptor; Belongs to the G-protein coupled receptor 1 family.
+
+[25] GPR4  (in 2/5 neighborhoods, avg_sim=0.442585)
+    GPR4 (9606.ENSP00000319744) 362 amino acids
+      <- CHRM1 sim=0.63167
+      <- CHRM2 sim=0.2535
+    G-protein coupled receptor 4; Proton-sensing receptor coupled to several G-proteins, including G(s), G(13) and G(q)/G(11) proteins, leading to cAMP production.
+
+[26] P2RY14  (in 2/5 neighborhoods, avg_sim=0.44209)
+    P2RY14 (9606.ENSP00000308361) 338 amino acids
+      <- CHRM1 sim=0.67342
+      <- CHRM2 sim=0.21076
+    P2Y purinoceptor 14; Receptor for UDP-glucose and other UDP-sugar coupled to G- proteins. Not activated by ATP, ADP, UTP or ATP.
+
+[27] GRM2  (in 2/5 neighborhoods, avg_sim=0.441661)
+    GRM2 (9606.ENSP00000378492) 872 amino acids
+      <- CHRM2 sim=0.418217
+      <- HRH1 sim=0.465105
+    Metabotropic glutamate receptor 2; G-protein coupled receptor for glutamate. Ligand binding causes a conformation change that triggers signaling via guanine nucleotide-binding proteins (G proteins) an...
+
+[28] MRGPRX1  (in 2/5 neighborhoods, avg_sim=0.421214)
+    MRGPRX1 (9606.ENSP00000305766) 322 amino acids
+      <- CHRM1 sim=0.654249
+      <- CHRM2 sim=0.188179
+    Mas-related G-protein coupled receptor member X1; Orphan receptor. Probably involved in the function of nociceptive neurons. May regulate nociceptor function and/or development, including the sensatio...
+
+[29] OR10H4  (in 2/5 neighborhoods, avg_sim=0.420285)
+    OR10H4 (9606.ENSP00000318834) 316 amino acids
+      <- CHRM1 sim=0.583506
+      <- CHRM2 sim=0.257065
+    Olfactory receptor 10H4; Odorant receptor; Belongs to the G-protein coupled receptor 1 family.
+
+[30] OPRM1  (in 2/5 neighborhoods, avg_sim=0.41409)
+    OPRM1 (9606.ENSP00000394624) 493 amino acids
+      <- CHRM2 sim=0.393154
+      <- HRH1 sim=0.435026
+    Mu-type opioid receptor; Receptor for endogenous opioids such as beta-endorphin and endomorphin. Receptor for natural and synthetic opioids including morphine, heroin, DAMGO, fentanyl, etorphine, bupr...
+
+ssrag> Loading index from "data/ssrag_human"...
+Loaded 19699 documents, dim=19955, contrast=141.262:1
+Built name index: 19699 proteins
+
+Query modes:
+  text search:         mitochondrial complex I
+  protein neighborhood: @EGFR
+  multi-target overlap: @EGFR @BRAF @MAPK1
+  set k:               k=20
+  quit:                quit
+
+ssrag> Set k=30
+ssrag> 
+Multi-target neighborhood overlap (5 targets)
+============================================================
+
+Target: GABRA1 (nnz=629)
+  Top 5 neighbors:
+    GLRA1 (fold_sim=0.649874)
+    GRIK2 (fold_sim=0.635434)
+    GABRA5 (fold_sim=0.634246)
+    KCNK4 (fold_sim=0.616819)
+    SCN9A (fold_sim=0.612236)
+
+Target: SLC6A4 (nnz=569)
+  Top 5 neighbors:
+    SLC7A5 (fold_sim=0.661753)
+    SLC1A1 (fold_sim=0.593589)
+    SLC9A3R1 (fold_sim=0.509546)
+    P2RX3 (fold_sim=0.478284)
+    SLC38A2 (fold_sim=0.476879)
+
+Target: ADRB1 (nnz=538)
+  Top 5 neighbors:
+    S1PR3 (fold_sim=0.43578)
+    HTR1B (fold_sim=0.4348)
+    LPAR3 (fold_sim=0.412677)
+    GRM3 (fold_sim=0.397147)
+    GABBR1 (fold_sim=0.394946)
+
+Target: OPRM1 (nnz=614)
+  Top 5 neighbors:
+    TBXA2R (fold_sim=0.619844)
+    SESN1 (fold_sim=0.473177)
+    NPY (fold_sim=0.472521)
+    BBC3 (fold_sim=0.458683)
+    CITED1 (fold_sim=0.442666)
+
+Target: CACNA1C (nnz=730)
+  Top 5 neighbors:
+    TRPV5 (fold_sim=0.6954)
+    KCNN2 (fold_sim=0.66413)
+    KCNC1 (fold_sim=0.652908)
+    KCNH2 (fold_sim=0.628579)
+    TMEM175 (fold_sim=0.628332)
+
+
+OVERLAPPING NEIGHBORHOODS (30 proteins in 2+ target neighborhoods)
+============================================================
+
+[1] HTR3B  (in 3/5 neighborhoods, avg_sim=0.380187)
+    HTR3B (9606.ENSP00000260191) 441 amino acids
+      <- GABRA1 sim=0.315961
+      <- SLC6A4 sim=0.260694
+      <- CACNA1C sim=0.563906
+    5-hydroxytryptamine receptor 3B; This is one of the several different receptors for 5- hydroxytryptamine (serotonin), a biogenic hormone that functions as a neurotransmitter, a hormone, and a mitogen....
+
+[2] HCN2  (in 3/5 neighborhoods, avg_sim=0.374299)
+    HCN2 (9606.ENSP00000251287) 889 amino acids
+      <- GABRA1 sim=0.321846
+      <- SLC6A4 sim=0.241795
+      <- CACNA1C sim=0.559255
+    Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 2; Hyperpolarization-activated ion channel exhibiting weak selectivity for potassium over sodium ions. Contributes to the n...
+
+[3] TRPM2  (in 3/5 neighborhoods, avg_sim=0.287302)
+    TRPM2 (9606.ENSP00000381026) 1553 amino acids
+      <- GABRA1 sim=0.338077
+      <- OPRM1 sim=0.21744
+      <- CACNA1C sim=0.306388
+    Transient receptor potential cation channel subfamily M member 2; [Isoform 1]: Nonselective, voltage-independent cation channel that mediates Na(+) and Ca(2+) influx, leading to increased cytoplasmic ...
+
+[4] KCNK6  (in 2/5 neighborhoods, avg_sim=0.498353)
+    KCNK6 (9606.ENSP00000263372) 313 amino acids
+      <- GABRA1 sim=0.384398
+      <- CACNA1C sim=0.612308
+    Potassium channel subfamily K member 6; Exhibits outward rectification in a physiological K(+) gradient and mild inward rectification in symmetrical K(+) conditions; Belongs to the two pore domain pot...
+
+[5] CHRNA2  (in 2/5 neighborhoods, avg_sim=0.490912)
+    CHRNA2 (9606.ENSP00000385026) 529 amino acids
+      <- GABRA1 sim=0.583012
+      <- CACNA1C sim=0.398813
+    Neuronal acetylcholine receptor subunit alpha-2; After binding acetylcholine, the AChR responds by an extensive change in conformation that affects all subunits and leads to opening of an ion-conducti...
+
+[6] KCNA4  (in 2/5 neighborhoods, avg_sim=0.484548)
+    KCNA4 (9606.ENSP00000328511) 653 amino acids
+      <- GABRA1 sim=0.472856
+      <- CACNA1C sim=0.496239
+    Potassium voltage-gated channel subfamily A member 4; Voltage-gated potassium channel that mediates transmembrane potassium transport in excitable membranes. Forms tetrameric potassium- selective chan...
+
+[7] CACNG6  (in 2/5 neighborhoods, avg_sim=0.484327)
+    CACNG6 (9606.ENSP00000252729) 260 amino acids
+      <- GABRA1 sim=0.346934
+      <- CACNA1C sim=0.62172
+    Voltage-dependent calcium channel gamma-6 subunit; Regulates the activity of L-type calcium channels that contain CACNA1C as pore-forming subunit; Belongs to the PMP-22/EMP/MP20 family. CACNG subfamil...
+
+[8] KCNK5  (in 2/5 neighborhoods, avg_sim=0.480841)
+    KCNK5 (9606.ENSP00000352527) 499 amino acids
+      <- GABRA1 sim=0.480948
+      <- CACNA1C sim=0.480734
+    Potassium channel subfamily K member 5; pH-dependent, voltage insensitive, outwardly rectifying potassium channel. Outward rectification is lost at high external K(+) concentrations.
+
+[9] KCNMB4  (in 2/5 neighborhoods, avg_sim=0.48077)
+    KCNMB4 (9606.ENSP00000258111) 210 amino acids
+      <- GABRA1 sim=0.350688
+      <- CACNA1C sim=0.610853
+    Calcium-activated potassium channel subunit beta-4; Regulatory subunit of the calcium activated potassium KCNMA1 (maxiK) channel. Modulates the calcium sensitivity and gating kinetics of KCNMA1, there...
+
+[10] CATSPER3  (in 2/5 neighborhoods, avg_sim=0.479583)
+    CATSPER3 (9606.ENSP00000282611) 398 amino acids
+      <- GABRA1 sim=0.364745
+      <- CACNA1C sim=0.59442
+    Cation channel sperm-associated protein 3; Voltage-gated calcium channel that plays a central role in calcium-dependent physiological responses essential for successful fertilization, such as sperm hy...
+
+[11] KCNH4  (in 2/5 neighborhoods, avg_sim=0.478428)
+    KCNH4 (9606.ENSP00000264661) 1017 amino acids
+      <- GABRA1 sim=0.345969
+      <- CACNA1C sim=0.610888
+    Potassium voltage-gated channel subfamily H member 4; Pore-forming (alpha) subunit of voltage-gated potassium channel. Elicits an outward current, but shows no inactivation. Channel properties may be ...
+
+[12] KCNH8  (in 2/5 neighborhoods, avg_sim=0.478256)
+    KCNH8 (9606.ENSP00000328813) 1107 amino acids
+      <- GABRA1 sim=0.429621
+      <- CACNA1C sim=0.526891
+    Potassium voltage-gated channel subfamily H member 8; Pore-forming (alpha) subunit of voltage-gated potassium channel. Elicits a slowly activating, outward rectifying current. Channel properties may b...
+
+[13] GABRA4  (in 2/5 neighborhoods, avg_sim=0.476967)
+    GABRA4 (9606.ENSP00000264318) 554 amino acids
+      <- GABRA1 sim=0.347939
+      <- CACNA1C sim=0.605995
+    Gamma-aminobutyric acid receptor subunit alpha-4; GABA, the major inhibitory neurotransmitter in the vertebrate brain, mediates neuronal inhibition by binding to the GABA/benzodiazepine receptor and o...
+
+[14] KCNH5  (in 2/5 neighborhoods, avg_sim=0.47695)
+    KCNH5 (9606.ENSP00000321427) 988 amino acids
+      <- GABRA1 sim=0.407589
+      <- CACNA1C sim=0.546311
+    Potassium voltage-gated channel subfamily H member 5; Pore-forming (alpha) subunit of voltage-gated potassium channel. Elicits a non-inactivating outward rectifying current. Channel properties may be ...
+
+[15] KCNK18  (in 2/5 neighborhoods, avg_sim=0.476646)
+    KCNK18 (9606.ENSP00000334650) 384 amino acids
+      <- GABRA1 sim=0.462626
+      <- CACNA1C sim=0.490665
+    Potassium channel subfamily K member 18; Outward rectifying potassium channel. Produces rapidly activating outward rectifier K(+) currents. May function as background potassium channel that sets the r...
+
+[16] KCNK1  (in 2/5 neighborhoods, avg_sim=0.476384)
+    KCNK1 (9606.ENSP00000355580) 336 amino acids
+      <- GABRA1 sim=0.504579
+      <- CACNA1C sim=0.448188
+    Potassium channel subfamily K member 1; Ion channel that contributes to passive transmembrane potassium transport and to the regulation of the resting membrane potential in brain astrocytes, but also ...
+
+[17] KCNK13  (in 2/5 neighborhoods, avg_sim=0.476277)
+    KCNK13 (9606.ENSP00000282146) 408 amino acids
+      <- GABRA1 sim=0.406028
+      <- CACNA1C sim=0.546525
+    Potassium channel subfamily K member 13; Potassium channel displaying weak inward rectification in symmetrical K(+) solution; Belongs to the two pore domain potassium channel (TC 1.A.1.8) family.
+
+[18] KCNE2  (in 2/5 neighborhoods, avg_sim=0.475918)
+    KCNE2 (9606.ENSP00000290310) 123 amino acids
+      <- GABRA1 sim=0.360838
+      <- CACNA1C sim=0.590998
+    Potassium voltage-gated channel subfamily E member 2; Ancillary protein that assembles as a beta subunit with a voltage-gated potassium channel complex of pore-forming alpha subunits. Modulates the ga...
+
+[19] LRRC52  (in 2/5 neighborhoods, avg_sim=0.475425)
+    LRRC52 (9606.ENSP00000294818) 313 amino acids
+      <- GABRA1 sim=0.414538
+      <- CACNA1C sim=0.536313
+    Leucine-rich repeat-containing protein 52; Auxiliary protein of the large-conductance, voltage and calcium-activated potassium channel (BK alpha). Modulates gating properties by producing a marked shi...
+
+[20] KCNK3  (in 2/5 neighborhoods, avg_sim=0.475128)
+    KCNK3 (9606.ENSP00000306275) 394 amino acids
+      <- GABRA1 sim=0.373203
+      <- CACNA1C sim=0.577053
+    Potassium channel subfamily K member 3; pH-dependent, voltage-insensitive, background potassium channel protein. Rectification direction results from potassium ion concentration on either side of the ...
+
+[21] KCNQ3  (in 2/5 neighborhoods, avg_sim=0.473386)
+    KCNQ3 (9606.ENSP00000373648) 872 amino acids
+      <- GABRA1 sim=0.59674
+      <- CACNA1C sim=0.350032
+    Potassium voltage-gated channel subfamily KQT member 3; Associates with KCNQ2 or KCNQ5 to form a potassium channel with essentially identical properties to the channel underlying the native M-current,...
+
+[22] CATSPER1  (in 2/5 neighborhoods, avg_sim=0.473293)
+    CATSPER1 (9606.ENSP00000309052) 780 amino acids
+      <- GABRA1 sim=0.397202
+      <- CACNA1C sim=0.549383
+    Cation channel sperm-associated protein 1; Voltage-gated calcium channel that plays a central role in calcium-dependent physiological responses essential for successful fertilization, such as sperm hy...
+
+[23] CNGA2  (in 2/5 neighborhoods, avg_sim=0.473258)
+    CNGA2 (9606.ENSP00000328478) 664 amino acids
+      <- GABRA1 sim=0.418391
+      <- CACNA1C sim=0.528125
+    Cyclic nucleotide-gated olfactory channel; Odorant signal transduction is probably mediated by a G- protein coupled cascade using cAMP as second messenger. The olfactory channel can be shown to be act...
+
+[24] KCNIP4  (in 2/5 neighborhoods, avg_sim=0.473179)
+    KCNIP4 (9606.ENSP00000371587) 250 amino acids
+      <- GABRA1 sim=0.536952
+      <- CACNA1C sim=0.409406
+    Kv channel-interacting protein 4; Regulatory subunit of Kv4/D (Shal)-type voltage-gated rapidly inactivating A-type potassium channels. Modulates KCND2 channel density, inactivation kinetics and rate ...
+
+[25] GLRB  (in 2/5 neighborhoods, avg_sim=0.472613)
+    GLRB (9606.ENSP00000264428) 497 amino acids
+      <- GABRA1 sim=0.320205
+      <- CACNA1C sim=0.625021
+    Glycine receptor subunit beta; Glycine receptors are ligand-gated chloride channels. GLRB does not form ligand-gated ion channels by itself, but is part of heteromeric ligand-gated chloride channels. ...
+
+[26] CACNA1H  (in 2/5 neighborhoods, avg_sim=0.471022)
+    CACNA1H (9606.ENSP00000334198) 2353 amino acids
+      <- GABRA1 sim=0.406509
+      <- CACNA1C sim=0.535536
+    Voltage-dependent T-type calcium channel subunit alpha-1H; Voltage-sensitive calcium channel that gives rise to T-type calcium currents. T-type calcium channels belong to the 'low-voltage activated (L...
+
+[27] KCNA3  (in 2/5 neighborhoods, avg_sim=0.471006)
+    KCNA3 (9606.ENSP00000358784) 575 amino acids
+      <- GABRA1 sim=0.498629
+      <- CACNA1C sim=0.443384
+    Potassium voltage-gated channel subfamily A member 3; Mediates the voltage-dependent potassium ion permeability of excitable membranes. Assuming opened or closed conformations in response to the volta...
+
+[28] HCN3  (in 2/5 neighborhoods, avg_sim=0.468712)
+    HCN3 (9606.ENSP00000357342) 774 amino acids
+      <- GABRA1 sim=0.469568
+      <- CACNA1C sim=0.467856
+    Potassium/sodium hyperpolarization-activated cyclic nucleotide-gated channel 3; Hyperpolarization-activated potassium channel. May also facilitate the permeation of sodium ions.
+
+[29] CCDC51  (in 2/5 neighborhoods, avg_sim=0.467593)
+    CCDC51 (9606.ENSP00000379047) 411 amino acids
+      <- GABRA1 sim=0.52045
+      <- CACNA1C sim=0.414736
+    Mitochondrial potassium channel; Mitochondrial potassium channel located in the mitochondrial inner membrane. Together with ABCB8/MITOSUR, forms a protein complex localized in the mitochondria that me...
+
+[30] KCNV2  (in 2/5 neighborhoods, avg_sim=0.466881)
+    KCNV2 (9606.ENSP00000371514) 545 amino acids
+      <- GABRA1 sim=0.544153
+      <- CACNA1C sim=0.38961
+    Potassium voltage-gated channel subfamily V member 2; Potassium channel subunit. Modulates channel activity by shifting the threshold and the half-maximal activation to more negative values; Belongs t...
+
+ssrag> 

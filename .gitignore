@@ -1,0 +1,28 @@
+# Build artifacts
+build/
+cmake-build-*/
+compile_commands.json
+
+# Data files (too large for GitHub — download STRING v12.0 separately)
+data/
+
+# CatWhisper (separate repo: https://github.com/IreGaddr/catwhisper)
+catwhisper/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude Code local settings
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+/tmp/
+*.tmp
