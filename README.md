@@ -1,5 +1,7 @@
 # SSRAG — Self-Sharpening Retrieval-Augmented Generation
 
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.19389138.svg)](https://doi.org/10.5281/zenodo.19389138)
+
 A retrieval system that improves with scale. SSRAG uses the **Involuted Oblate Toroid (IOT)
 distance metric** via [CatWhisper](https://github.com/IreGaddr/catwhisper) and a **lambda fold**
 graph enrichment algorithm to build a self-reinforcing semantic index over structured data.
